@@ -1,2 +1,2 @@
-# node-boilerplate
-Basic Node Boiler Plate using Express
+# notificationservice
+Notification Service
