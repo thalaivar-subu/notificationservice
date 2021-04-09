@@ -1,13 +1,17 @@
+require("./db/mongo/index").Init();
 // eslint-disable-next-line no-unused-vars
 import logEventErrors from "./utils/eventerrors";
 import express from "express";
 import logger from "./utils/logger";
 import Middlewares from "./middlewares/index";
 import { APP_NAME, PORT } from "./lib/constants";
+import RestRoutes from "./apis/index";
 
 const app = express();
 
 Middlewares(app);
+
+RestRoutes(app);
 
 // Healtcheck End point
 app.get("/", (req, res) => res.status(200).send({ message: "I am Alive" }));

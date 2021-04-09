@@ -7,3 +7,5 @@ export const TEST_PORT = 8081;
 export const TEST_URL = `http://127.0.0.1:${TEST_PORT}`;
 export const PORT = NODE_ENV === "test" ? TEST_PORT : APP_PORT;
 export const LOCAL_ENVS = ["test", "development"];
+export const MONGO_URI =
+  process.env.MONGO_URI || "mongodb://localhost:27017/test";
